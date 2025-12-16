@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Mail, Linkedin, Twitter, Github, ArrowUp } from "lucide-react";
+import { Mail, Linkedin, Twitter, Github, ArrowUp, MapPin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const Footer = () => {
@@ -16,11 +16,21 @@ const Footer = () => {
         <div className="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-10 mb-10">
           {/* Brand Section */}
           <div className="lg:col-span-1">
-            <h3 className="text-2xl sm:text-3xl font-bold gradient-text-primary mb-4 sm:mb-6">Grevya</h3>
+            <h3 className="text-2xl sm:text-3xl font-bold gradient-text-primary mb-2 sm:mb-3">Grevya</h3>
+            <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base font-medium">
+              Grevya Technologies Pvt Ltd
+            </p>
             <p className="text-gray-300 mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">
               Building intelligent, scalable AI solutions for the future of business. Empowering enterprises with cutting-edge technology.
             </p>
             <div className="mb-4">
+              <div className="flex items-start gap-2 text-gray-300 text-sm sm:text-base mb-3">
+                <MapPin className="h-4 w-4 sm:h-5 sm:w-5 mt-1 flex-shrink-0" />
+                <span className="leading-relaxed">
+                  4th South Cross St., Kovai Thiru Nagar,<br />
+                  Kalapatty (E), Coimbatore 641014
+                </span>
+              </div>
               <a 
                 href="mailto:kavin@grevya.com" 
                 className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm sm:text-base font-medium"
@@ -90,12 +100,6 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="#testimonials" className="hover:text-white transition-colors font-medium flex items-center gap-2 group">
-                  <span className="w-1.5 h-1.5 bg-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  Testimonials
-                </a>
-              </li>
-              <li>
                 <Link to="#contact" className="hover:text-white transition-colors font-medium flex items-center gap-2 group">
                   <span className="w-1.5 h-1.5 bg-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Contact
@@ -126,7 +130,7 @@ const Footer = () => {
         <div className="border-t border-gray-700 pt-8 mt-8">
           <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
             <p className="text-gray-400 text-xs sm:text-sm text-center sm:text-left">
-              &copy; 2025 Grevya. All rights reserved. | Empowering businesses with AI-driven innovation.
+              &copy; 2025 Grevya Technologies Pvt Ltd. All rights reserved. | Empowering businesses with AI-driven innovation.
             </p>
             <Button
               onClick={scrollToTop}
