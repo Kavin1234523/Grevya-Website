@@ -197,8 +197,8 @@ const Contact = () => {
                     <Phone className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
                     <div>
                       <strong className="text-gray-900 block mb-1">Phone</strong>
-                      <a href="tel:+15551234567" className="text-primary-600 hover:text-primary-700 font-semibold">
-                        +1 (555) 123-4567
+                      <a href="tel:+916381734688" className="text-primary-600 hover:text-primary-700 font-semibold">
+                        +91 6381734688
                       </a>
                     </div>
                   </div>
@@ -220,3 +220,4 @@ const Contact = () => {
 };
 
 export default Contact;
+
