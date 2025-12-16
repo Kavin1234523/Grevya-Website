@@ -4,7 +4,6 @@ import Navigation from "@/components/Navigation";
 import Portfolio from "@/components/Portfolio";
 import Industries from "@/components/Industries";
 import WhyChooseUs from "@/components/WhyChooseUs";
-import Testimonials from "@/components/Testimonials";
 import Contact from "@/components/Contact";
 import Footer from "@/components/Footer";
 
@@ -16,7 +15,6 @@ const Index = () => {
       <Portfolio />
       <Industries />
       <WhyChooseUs />
-      <Testimonials />
       <Contact />
       <Footer />
     </div>
@@ -24,3 +22,4 @@ const Index = () => {
 };
 
 export default Index;
+
