@@ -59,7 +59,25 @@ const Footer = () => {
               <li>
                 <Link to="#industries" className="hover:text-white transition-colors font-medium flex items-center gap-2 group">
                   <span className="w-1.5 h-1.5 bg-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  AI Chatbots
+                </Link>
+              </li>
+              <li>
+                <Link to="#industries" className="hover:text-white transition-colors font-medium flex items-center gap-2 group">
+                  <span className="w-1.5 h-1.5 bg-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  AI Agents
+                </Link>
+              </li>
+              <li>
+                <Link to="#industries" className="hover:text-white transition-colors font-medium flex items-center gap-2 group">
+                  <span className="w-1.5 h-1.5 bg-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Healthcare AI
+                </Link>
+              </li>
+              <li>
+                <Link to="#industries" className="hover:text-white transition-colors font-medium flex items-center gap-2 group">
+                  <span className="w-1.5 h-1.5 bg-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  Interview as a Service
                 </Link>
               </li>
               <li>
