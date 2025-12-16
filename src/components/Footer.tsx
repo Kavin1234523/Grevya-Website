@@ -123,6 +123,12 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link to="#services" className="hover:text-white transition-colors font-medium flex items-center gap-2 group">
+                  <span className="w-1.5 h-1.5 bg-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  Website Development
+                </Link>
+              </li>
             </ul>
           </div>
 
