@@ -32,11 +32,11 @@ const Footer = () => {
                 </span>
               </div>
               <a 
-                href="mailto:kavin@grevya.com" 
+                href="mailto:info@grevya.com" 
                 className="flex items-center gap-2 text-gray-300 hover:text-white transition-colors text-sm sm:text-base font-medium"
               >
                 <Mail className="h-4 w-4 sm:h-5 sm:w-5" />
-                <span>kavin@grevya.com</span>
+                <span>info@grevya.com</span>
               </a>
             </div>
             <div className="flex gap-4">
