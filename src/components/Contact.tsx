@@ -188,8 +188,8 @@ const Contact = () => {
                     <Mail className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
                     <div>
                       <strong className="text-gray-900 block mb-1">Email</strong>
-                      <a href="mailto:kavin@grevya.com" className="text-primary-600 hover:text-primary-700 font-semibold">
-                        kavin@grevya.com
+                      <a href="mailto:info@grevya.com" className="text-primary-600 hover:text-primary-700 font-semibold">
+                        info@grevya.com
                       </a>
                     </div>
                   </div>
@@ -197,8 +197,8 @@ const Contact = () => {
                     <Phone className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
                     <div>
                       <strong className="text-gray-900 block mb-1">Phone</strong>
-                      <a href="tel:+916381734688" className="text-primary-600 hover:text-primary-700 font-semibold">
-                        +91 6381734688
+                      <a href="tel:+9195669 66064" className="text-primary-600 hover:text-primary-700 font-semibold">
+                        +91 9566966064
                       </a>
                     </div>
                   </div>
