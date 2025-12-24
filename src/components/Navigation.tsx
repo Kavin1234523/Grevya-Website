@@ -22,60 +22,48 @@ const Navigation = () => {
   };
 
   return (
-    <nav className="fixed top-0 w-full glass border-b border-gray-200/50 z-50 transition-all duration-300 shadow-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16 sm:h-20">
-          <div className="flex-shrink-0">
-            <Link to="/" className="group">
-              <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold gradient-text-primary transition-all duration-300 group-hover:scale-105">
-                Grevya
-              </h1>
-            </Link>
-          </div>
-          
-          {/* Desktop Menu */}
-          <div className="hidden md:block">
-            <div className="ml-10 flex items-baseline space-x-1 lg:space-x-2">
-              <Link to="/" className="relative text-gray-700 hover:text-primary-600 px-3 lg:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-primary-50 group tracking-wide">
-                <span className="relative z-10">Home</span>
-                <span className="absolute inset-0 bg-primary-600/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></span>
-              </Link>
-              <Link to="/about" className="relative text-gray-700 hover:text-primary-600 px-3 lg:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-primary-50 group tracking-wide">
-                <span className="relative z-10">About</span>
-                <span className="absolute inset-0 bg-primary-600/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></span>
-              </Link>
-              <Link to="/careers" className="relative text-gray-700 hover:text-primary-600 px-3 lg:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-primary-50 group tracking-wide">
-                <span className="relative z-10">Careers</span>
-                <span className="absolute inset-0 bg-primary-600/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></span>
-              </Link>
-              <button onClick={() => scrollToSection('industries')} className="relative text-gray-700 hover:text-primary-600 px-3 lg:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-primary-50 group tracking-wide">
-                <span className="relative z-10">Solutions</span>
-                <span className="absolute inset-0 bg-primary-600/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></span>
-              </button>
-              <button onClick={() => scrollToSection('contact')} className="relative text-gray-700 hover:text-primary-600 px-3 lg:px-4 py-2 rounded-lg text-sm font-semibold transition-all duration-300 hover:bg-primary-50 group tracking-wide">
-                <span className="relative z-10">Contact</span>
-                <span className="absolute inset-0 bg-primary-600/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></span>
-              </button>
-            </div>
-          </div>
-
-          <div className="hidden md:flex items-center gap-3">
-            <Button 
-              onClick={() => {
-                if (location.pathname === '/careers') {
-                  const formElement = document.getElementById('open-positions');
-                  if (formElement) {
-                    formElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                  }
-                } else {
-                  window.location.href = '/careers#open-positions';
-                }
+    <nav className="fixed top-0 left-0 right-0 w-full bg-white/80 backdrop-blur-md border-b border-gray-200/60 z-50 transition-all duration-300 shadow-sm">
+      <div className="flex justify-between items-center min-h-[80px] h-20 py-2 relative">
+        <div className="flex-shrink-0 z-10 relative flex items-center pl-2 sm:pl-4">
+          <Link to="/" className="group flex items-center">
+            <img 
+              src="/Grevya Logo.svg" 
+              alt="Grevya" 
+              className="h-20 sm:h-24 md:h-28 lg:h-32 xl:h-36 w-auto transition-all duration-300 group-hover:scale-105 object-contain"
+              style={{ 
+                maxHeight: '144px',
+                minHeight: '80px'
               }}
-              variant="outline"
-              className="border-2 border-primary-600 text-primary-600 hover:bg-primary-600 hover:text-white text-sm px-5 py-2.5 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
-            >
-              View Open Roles
-            </Button>
+            />
+          </Link>
+        </div>
+        
+        {/* Desktop Menu - Centered */}
+        <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 items-center space-x-2 lg:space-x-4">
+          <Link to="/" className="relative text-gray-700 hover:text-primary-600 px-4 py-2 rounded-lg text-base font-semibold transition-all duration-300 hover:bg-primary-50 group tracking-wide">
+            <span className="relative z-10">Home</span>
+            <span className="absolute inset-0 bg-primary-600/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+          </Link>
+          <Link to="/about" className="relative text-gray-700 hover:text-primary-600 px-4 py-2 rounded-lg text-base font-semibold transition-all duration-300 hover:bg-primary-50 group tracking-wide">
+            <span className="relative z-10">About</span>
+            <span className="absolute inset-0 bg-primary-600/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+          </Link>
+          <Link to="/careers" className="relative text-gray-700 hover:text-primary-600 px-4 py-2 rounded-lg text-base font-semibold transition-all duration-300 hover:bg-primary-50 group tracking-wide">
+            <span className="relative z-10">Careers</span>
+            <span className="absolute inset-0 bg-primary-600/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+          </Link>
+          <button onClick={() => scrollToSection('industries')} className="relative text-gray-700 hover:text-primary-600 px-4 py-2 rounded-lg text-base font-semibold transition-all duration-300 hover:bg-primary-50 group tracking-wide">
+            <span className="relative z-10">Solutions</span>
+            <span className="absolute inset-0 bg-primary-600/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+          </button>
+          <button onClick={() => scrollToSection('contact')} className="relative text-gray-700 hover:text-primary-600 px-4 py-2 rounded-lg text-base font-semibold transition-all duration-300 hover:bg-primary-50 group tracking-wide">
+            <span className="relative z-10">Contact</span>
+            <span className="absolute inset-0 bg-primary-600/10 rounded-lg scale-0 group-hover:scale-100 transition-transform duration-300"></span>
+          </button>
+        </div>
+
+        <div className="flex items-center gap-3 pr-2 sm:pr-4">
+          <div className="hidden md:flex">
             <Button 
               onClick={() => scrollToSection('contact')} 
               className="bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-sm px-6 py-2.5 rounded-lg font-semibold shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
@@ -96,11 +84,12 @@ const Navigation = () => {
             </Button>
           </div>
         </div>
+      </div>
 
-        {/* Mobile Menu */}
-        {isMenuOpen && (
-          <div className="md:hidden">
-            <div className="px-4 pt-4 pb-6 space-y-2 bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-lg">
+      {/* Mobile Menu */}
+      {isMenuOpen && (
+        <div className="md:hidden">
+          <div className="px-6 pt-4 pb-6 space-y-2 bg-white/95 backdrop-blur-md border-t border-gray-200 shadow-lg">
               <Link 
                 to="/" 
                 onClick={() => setIsMenuOpen(false)}
@@ -152,7 +141,6 @@ const Navigation = () => {
             </div>
           </div>
         )}
-      </div>
     </nav>
   );
 };

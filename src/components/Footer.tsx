@@ -59,17 +59,23 @@ const Footer = () => {
               <li>
                 <Link to="#industries" className="hover:text-white transition-all duration-300 font-medium flex items-center gap-2 group transform hover:translate-x-1">
                   <span className="w-1.5 h-1.5 bg-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  AI Chatbots
+                  AI Agents
                 </Link>
               </li>
               <li>
                 <Link to="#industries" className="hover:text-white transition-all duration-300 font-medium flex items-center gap-2 group transform hover:translate-x-1">
                   <span className="w-1.5 h-1.5 bg-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  AI Agents
+                  AI Automation
                 </Link>
               </li>
               <li>
-                <Link to="#services" className="hover:text-white transition-colors font-medium flex items-center gap-2 group">
+                <Link to="#industries" className="hover:text-white transition-all duration-300 font-medium flex items-center gap-2 group transform hover:translate-x-1">
+                  <span className="w-1.5 h-1.5 bg-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
+                  Gen AI Integration
+                </Link>
+              </li>
+              <li>
+                <Link to="#services" className="hover:text-white transition-all duration-300 font-medium flex items-center gap-2 group transform hover:translate-x-1">
                   <span className="w-1.5 h-1.5 bg-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
                   Website Development
                 </Link>
@@ -77,31 +83,25 @@ const Footer = () => {
               <li>
                 <Link to="#industries" className="hover:text-white transition-all duration-300 font-medium flex items-center gap-2 group transform hover:translate-x-1">
                   <span className="w-1.5 h-1.5 bg-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  Healthcare AI
+                  AI Chatbot
                 </Link>
               </li>
               <li>
                 <Link to="#industries" className="hover:text-white transition-all duration-300 font-medium flex items-center gap-2 group transform hover:translate-x-1">
                   <span className="w-1.5 h-1.5 bg-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  Interview as a Service
+                  RAG Application
                 </Link>
               </li>
               <li>
                 <Link to="#industries" className="hover:text-white transition-all duration-300 font-medium flex items-center gap-2 group transform hover:translate-x-1">
                   <span className="w-1.5 h-1.5 bg-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  HR & Recruitment
+                  Social Media Automation
                 </Link>
               </li>
               <li>
                 <Link to="#industries" className="hover:text-white transition-all duration-300 font-medium flex items-center gap-2 group transform hover:translate-x-1">
                   <span className="w-1.5 h-1.5 bg-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  SaaS Automation
-                </Link>
-              </li>
-              <li>
-                <Link to="#industries" className="hover:text-white transition-all duration-300 font-medium flex items-center gap-2 group transform hover:translate-x-1">
-                  <span className="w-1.5 h-1.5 bg-primary-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity"></span>
-                  Enterprise AI
+                  Virtual Assistance
                 </Link>
               </li>
             </ul>
@@ -182,13 +182,13 @@ const Footer = () => {
                 &copy; {new Date().getFullYear()} Grevya Technologies Pvt Ltd. All rights reserved.
               </p>
               <div className="flex gap-4 text-xs sm:text-sm">
-                <a href="/privacy" className="text-gray-400 hover:text-white transition-colors hover:underline">
+                <Link to="/privacy" className="text-gray-400 hover:text-white transition-colors hover:underline">
                   Privacy Policy
-                </a>
+                </Link>
                 <span className="text-gray-600">|</span>
-                <a href="/terms" className="text-gray-400 hover:text-white transition-colors hover:underline">
+                <Link to="/terms" className="text-gray-400 hover:text-white transition-colors hover:underline">
                   Terms of Service
-                </a>
+                </Link>
               </div>
             </div>
             <Button

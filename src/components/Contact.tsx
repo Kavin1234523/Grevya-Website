@@ -4,9 +4,10 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
-import { Mail, Calendar, Phone, Clock, Sparkles, Send } from "lucide-react";
+import { Mail, Calendar, Phone, Clock, Sparkles, Send, Loader2 } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import emailjs from '@emailjs/browser';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -15,15 +16,67 @@ const Contact = () => {
     company: '',
     message: ''
   });
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const { toast } = useToast();
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    toast({
-      title: "Message sent successfully!",
-      description: "We'll get back to you within 24 hours.",
-    });
-    setFormData({ name: '', email: '', company: '', message: '' });
+    setIsSubmitting(true);
+
+    try {
+      // EmailJS configuration - replace these with your actual values
+      const serviceId = import.meta.env.VITE_EMAILJS_SERVICE_ID || 'your_service_id';
+      const templateId = import.meta.env.VITE_EMAILJS_TEMPLATE_ID || 'your_template_id';
+      const publicKey = import.meta.env.VITE_EMAILJS_PUBLIC_KEY || 'your_public_key';
+
+      // Check if EmailJS is configured
+      if (serviceId === 'your_service_id' || templateId === 'your_template_id' || publicKey === 'your_public_key') {
+        // Fallback: Use mailto link if EmailJS is not configured
+        const subject = encodeURIComponent(`Contact Form Submission from ${formData.name}`);
+        const body = encodeURIComponent(
+          `Name: ${formData.name}\nEmail: ${formData.email}\nCompany: ${formData.company}\n\nMessage:\n${formData.message}`
+        );
+        window.location.href = `mailto:kavin@grevya.com?subject=${subject}&body=${body}`;
+        
+        toast({
+          title: "Opening email client...",
+          description: "Please send the email from your email client.",
+        });
+        setFormData({ name: '', email: '', company: '', message: '' });
+        setIsSubmitting(false);
+        return;
+      }
+
+      // Send email using EmailJS
+      await emailjs.send(
+        serviceId,
+        templateId,
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          company: formData.company,
+          message: formData.message,
+          to_email: 'kavin@grevya.com',
+        },
+        publicKey
+      );
+
+      toast({
+        title: "Message sent successfully!",
+        description: "We'll get back to you within 24 hours.",
+        variant: "default",
+      });
+      setFormData({ name: '', email: '', company: '', message: '' });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Failed to send message",
+        description: "Please try again or contact us directly at kavin@grevya.com",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -121,11 +174,21 @@ const Contact = () => {
                 </div>
                 <Button 
                   type="submit" 
-                  className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white text-lg py-6 font-bold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105"
+                  disabled={isSubmitting}
+                  className="w-full bg-gradient-to-r from-primary-600 to-primary-700 hover:from-primary-700 hover:to-primary-800 text-white text-lg py-6 font-bold shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:scale-105 disabled:opacity-50 disabled:cursor-not-allowed disabled:transform-none"
                 >
                   <span className="flex items-center justify-center gap-2">
-                    <Send className="h-5 w-5" />
-                    Send Message
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="h-5 w-5 animate-spin" />
+                        Sending...
+                      </>
+                    ) : (
+                      <>
+                        <Send className="h-5 w-5" />
+                        Send Message
+                      </>
+                    )}
                   </span>
                 </Button>
               </form>
@@ -188,8 +251,8 @@ const Contact = () => {
                     <Mail className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
                     <div>
                       <strong className="text-gray-900 block mb-1">Email</strong>
-                      <a href="mailto:info@grevya.com" className="text-primary-600 hover:text-primary-700 font-semibold">
-                        info@grevya.com
+                      <a href="mailto:kavin@grevya.com" className="text-primary-600 hover:text-primary-700 font-semibold">
+                        kavin@grevya.com
                       </a>
                     </div>
                   </div>
@@ -197,8 +260,8 @@ const Contact = () => {
                     <Phone className="h-5 w-5 text-primary-600 mt-1 flex-shrink-0" />
                     <div>
                       <strong className="text-gray-900 block mb-1">Phone</strong>
-                      <a href="tel:+9195669 66064" className="text-primary-600 hover:text-primary-700 font-semibold">
-                        +91 9566966064
+                      <a href="tel:+916381734688" className="text-primary-600 hover:text-primary-700 font-semibold">
+                        +91 6381734688
                       </a>
                     </div>
                   </div>

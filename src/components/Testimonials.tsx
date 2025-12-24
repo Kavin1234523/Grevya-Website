@@ -12,8 +12,8 @@ const Testimonials = () => {
     },
     {
       name: "Michael Chen",
-      role: "CTO, HealthCare Plus",
-      content: "The AI solutions provided by Grevya have revolutionized our patient care system. Their team's expertise and dedication to our success has been outstanding. The ROI exceeded our expectations.",
+      role: "CTO, SupplyChain Pro",
+      content: "The AI solutions provided by Grevya have revolutionized our supply chain operations. Their team's expertise and dedication to our success has been outstanding. The ROI exceeded our expectations.",
       rating: 5,
       gradient: "from-green-500 to-emerald-500"
     },

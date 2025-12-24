@@ -6,11 +6,11 @@ import { Brain, Users, Heart, TrendingUp, ShoppingCart, FileText, ArrowRight, Sp
 const Portfolio = () => {
   const projects = [
     {
-      title: "AI-Powered Healthcare Platform",
-      description: "Revolutionary patient management system leveraging advanced ML algorithms for predictive diagnostics, treatment optimization, and real-time health monitoring.",
+      title: "AI-Powered Supply Chain Platform",
+      description: "Intelligent supply chain management system leveraging advanced ML algorithms for demand forecasting, inventory optimization, and real-time logistics tracking.",
       icon: Heart,
       technologies: ["Machine Learning", "Python", "TensorFlow", "React", "AWS"],
-      impact: "Reduced diagnosis time by 45%",
+      impact: "Reduced inventory costs by 45%",
       color: "from-red-500 via-pink-500 to-rose-500",
       gradient: "bg-gradient-to-br"
     },

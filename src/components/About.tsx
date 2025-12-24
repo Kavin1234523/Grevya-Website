@@ -64,22 +64,22 @@ const About = () => {
               <div className="grid grid-cols-2 gap-6 sm:gap-8">
                 <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                   <div className="text-4xl sm:text-5xl font-extrabold gradient-text-primary mb-2">50+</div>
-                  <div className="text-gray-700 text-sm sm:text-base font-semibold">Projects Delivered</div>
+                  <div className="text-gray-700 text-sm sm:text-base font-semibold">AI & Automation Projects Delivered</div>
                   <Award className="h-6 w-6 text-primary-600 mx-auto mt-3" />
                 </div>
                 <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
-                  <div className="text-4xl sm:text-5xl font-extrabold gradient-text-primary mb-2">100%</div>
-                  <div className="text-gray-700 text-sm sm:text-base font-semibold">Client Satisfaction</div>
+                  <div className="text-4xl sm:text-5xl font-extrabold gradient-text-primary mb-2">4.9★</div>
+                  <div className="text-gray-700 text-sm sm:text-base font-semibold">Average Client Satisfaction</div>
                   <TrendingUp className="h-6 w-6 text-primary-600 mx-auto mt-3" />
                 </div>
                 <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                   <div className="text-4xl sm:text-5xl font-extrabold gradient-text-primary mb-2">24/7</div>
-                  <div className="text-gray-700 text-sm sm:text-base font-semibold">Support Available</div>
+                  <div className="text-gray-700 text-sm sm:text-base font-semibold">Priority Expert Support</div>
                   <Clock className="h-6 w-6 text-primary-600 mx-auto mt-3" />
                 </div>
                 <div className="text-center p-6 bg-white rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
                   <div className="text-4xl sm:text-5xl font-extrabold gradient-text-primary mb-2">5+</div>
-                  <div className="text-gray-700 text-sm sm:text-base font-semibold">Years Experience</div>
+                  <div className="text-gray-700 text-sm sm:text-base font-semibold">Years of AI Engineering Experience</div>
                   <Users className="h-6 w-6 text-primary-600 mx-auto mt-3" />
                 </div>
               </div>

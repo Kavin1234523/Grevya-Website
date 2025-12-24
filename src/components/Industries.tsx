@@ -6,10 +6,10 @@ import { Button } from "@/components/ui/button";
 const Industries = () => {
   const industries = [
     {
-      title: "Healthcare",
-      description: "Revolutionary AI-powered medical imaging, intelligent patient triage, and advanced diagnostic assistance transforming healthcare delivery.",
+      title: "Manufacturing & Supply Chain",
+      description: "Intelligent manufacturing solutions with AI-driven production optimization, predictive maintenance, and advanced supply chain analytics transforming operations.",
       icon: File,
-      solutions: ["Medical Image Analysis", "Patient Triage Systems", "Diagnostic AI Tools", "Predictive Health Analytics"],
+      solutions: ["Production Optimization", "Predictive Maintenance", "Supply Chain Analytics", "Quality Control AI"],
       gradient: "from-red-500 to-pink-500",
       bgGradient: "from-red-50 to-pink-50"
     },
